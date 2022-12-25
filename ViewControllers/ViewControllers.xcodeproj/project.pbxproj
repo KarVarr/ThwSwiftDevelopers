@@ -13,6 +13,7 @@
 		17C35E51295846890086AD69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C35E4F295846890086AD69 /* Main.storyboard */; };
 		17C35E532958468B0086AD69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C35E522958468B0086AD69 /* Assets.xcassets */; };
 		17C35E562958468B0086AD69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C35E542958468B0086AD69 /* LaunchScreen.storyboard */; };
+		17C35E5E295848D60086AD69 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C35E5D295848D60086AD69 /* ViewControllerTwo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		17C35E522958468B0086AD69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17C35E552958468B0086AD69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17C35E572958468B0086AD69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C35E5D295848D60086AD69 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				17C35E4B295846890086AD69 /* SceneDelegate.swift */,
 				17C35E4D295846890086AD69 /* ViewController.swift */,
 				17C35E4F295846890086AD69 /* Main.storyboard */,
+				17C35E5D295848D60086AD69 /* ViewControllerTwo.swift */,
 				17C35E522958468B0086AD69 /* Assets.xcassets */,
 				17C35E542958468B0086AD69 /* LaunchScreen.storyboard */,
 				17C35E572958468B0086AD69 /* Info.plist */,
@@ -141,6 +144,7 @@
 				17C35E4E295846890086AD69 /* ViewController.swift in Sources */,
 				17C35E4A295846890086AD69 /* AppDelegate.swift in Sources */,
 				17C35E4C295846890086AD69 /* SceneDelegate.swift in Sources */,
+				17C35E5E295848D60086AD69 /* ViewControllerTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
