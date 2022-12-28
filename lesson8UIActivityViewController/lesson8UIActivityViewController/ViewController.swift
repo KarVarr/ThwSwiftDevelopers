@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     var buttonShare = UIButton()
     var textField = UITextField()
@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        view.backgroundColor = .cyan
         createTextField()
         createButton ()
     }
@@ -28,19 +29,32 @@ class ViewController: UIViewController {
         textField.center = view.center
         textField.borderStyle = UITextField.BorderStyle.roundedRect
         textField.placeholder = "Enter text to share"
+        textField.tintColor = .orange
+        textField.textColor = .magenta
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.borderWidth = 2
+        textField.backgroundColor = .cyan
+        textField.delegate = self
         
         view.addSubview(textField)
     }
     
     func createButton () {
         buttonShare = UIButton(type: UIButton.ButtonType.roundedRect)
+        buttonShare.backgroundColor = .magenta
         buttonShare.frame = CGRect(x: 50, y: 350, width: 280, height: 44)
         buttonShare.setTitle("Share", for: .normal)
+        buttonShare.tintColor = .black
+        buttonShare.layer.borderWidth = 1
+        buttonShare.layer.borderColor = UIColor.black.cgColor
+        buttonShare.layer.cornerRadius = 20
         buttonShare.addTarget(self, action: #selector(handlerShare), for: .touchUpInside)
         
         view.addSubview(buttonShare)
     }
     
+    
+    //MARK: - ACTIVITY VIEW CONTROLLER
     @objc func handlerShare (paramSender: Any) {
         let text = textField.text
         
@@ -53,6 +67,12 @@ class ViewController: UIViewController {
         }
         activityViewController = UIActivityViewController(activityItems: [textField.text ?? "nil"], applicationActivities: nil)
         present(activityViewController!, animated: true)
+    }
+    
+    //MARK: - UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 
