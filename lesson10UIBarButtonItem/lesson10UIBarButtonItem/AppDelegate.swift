@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let vc = ViewController()
-        let nacController = UINavigationController(rootViewController: vc)
-        window?.rootViewController = nacController
-        window?.makeKeyAndVisible()
-        
+//        let vc = ViewController()
+//        let navController = UINavigationController(rootViewController: vc)
+//        window?.rootViewController = navController
+//        window?.makeKeyAndVisible()
+//        
         
         return true
     }
