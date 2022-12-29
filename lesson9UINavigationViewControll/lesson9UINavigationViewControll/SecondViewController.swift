@@ -16,6 +16,21 @@ class SecondViewController: UIViewController {
         view.backgroundColor = .cyan
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        perform(#selector(goBack), with: nil, afterDelay: 3.0)
+    }
+    
+    @objc func goBack() {
+        //navigationController?.popViewController(animated: true)
+        var currentControllerArray = navigationController?.viewControllers
+        currentControllerArray?.removeLast()
+        
+        //navigationController?.viewControllers = currentControllerArray ?? currentControllerArray!
+        if let newController = currentControllerArray {
+            navigationController?.viewControllers = newController
+        }
+    }
 
 
 }
