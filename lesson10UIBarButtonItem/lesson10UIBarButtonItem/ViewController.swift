@@ -38,12 +38,12 @@ class ViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: simpleSwitch)
         
         
-        //segmentCOntroller (! !! !!!)
+        //segmentController (! !! !!!)
         let items = ["on", "off"]
         let segmentController = UISegmentedControl(items: items)
-        //segmentController.isMomentary = true  
+        //segmentController.isMomentary = true
         segmentController.center = view.center
-        segmentController.addTarget(self, action: #selector(segmentContolerTapped(param:)), for: .valueChanged)
+        segmentController.addTarget(self, action: #selector(segmentControllerTapped(param:)), for: .valueChanged)
         view.addSubview(segmentController)
     }
     
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         param.isOn ? print("Switch is ON") : print("Switch in OFF")
     }
     
-    @objc func segmentContolerTapped(param: UISegmentedControl) {
+    @objc func segmentControllerTapped(param: UISegmentedControl) {
         (param.selectedSegmentIndex != 0) ? print("OFF") : print("ON")
     }
 
