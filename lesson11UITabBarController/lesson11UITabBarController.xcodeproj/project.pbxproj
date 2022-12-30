@@ -13,6 +13,7 @@
 		17B04FDE295F2E1900F0D361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B04FDC295F2E1900F0D361 /* Main.storyboard */; };
 		17B04FE0295F2E1B00F0D361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B04FDF295F2E1B00F0D361 /* Assets.xcassets */; };
 		17B04FE3295F2E1B00F0D361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B04FE1295F2E1B00F0D361 /* LaunchScreen.storyboard */; };
+		17B04FEB295F2FC500F0D361 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B04FEA295F2FC500F0D361 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		17B04FDF295F2E1B00F0D361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17B04FE2295F2E1B00F0D361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17B04FE4295F2E1B00F0D361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B04FEA295F2FC500F0D361 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				17B04FD6295F2E1900F0D361 /* AppDelegate.swift */,
 				17B04FD8295F2E1900F0D361 /* SceneDelegate.swift */,
+				17B04FEA295F2FC500F0D361 /* SecondViewController.swift */,
 				17B04FDA295F2E1900F0D361 /* ViewController.swift */,
 				17B04FDC295F2E1900F0D361 /* Main.storyboard */,
 				17B04FDF295F2E1B00F0D361 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B04FEB295F2FC500F0D361 /* SecondViewController.swift in Sources */,
 				17B04FDB295F2E1900F0D361 /* ViewController.swift in Sources */,
 				17B04FD7295F2E1900F0D361 /* AppDelegate.swift in Sources */,
 				17B04FD9295F2E1900F0D361 /* SceneDelegate.swift in Sources */,
