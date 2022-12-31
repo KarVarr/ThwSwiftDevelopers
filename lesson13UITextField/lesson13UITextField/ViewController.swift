@@ -21,7 +21,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //        textField.layer.cornerRadius = 5
         textField.placeholder = "text me"
         textField.clearButtonMode = UITextField.ViewMode.whileEditing
-        textField.becomeFirstResponder()
+        //textField.becomeFirstResponder()
+        //textField.resignFirstResponder()
         return textField
     }
 
@@ -34,10 +35,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         myTextField.delegate = self
         
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChangeNotification(param:)), name: UITextField.textDidChangeNotification, object: nil)
         
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { nc in
+            self.view.frame.origin.y = -50
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { nc in
+            self.view.frame.origin.y = 0.0
+        }
     }
     
-    //MARK: - CreateUI
+    //MARK: - Notification
+    
+    @objc func textDidChangeNotification(param: NSNotification) {
+        print("textDidChangeNotification \(param)")
+    }
    
     
     //MARK: - UITextField
