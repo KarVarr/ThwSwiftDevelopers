@@ -40,19 +40,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         let scrollViewRect = self.view.bounds
         myScrollView = UIScrollView(frame: scrollViewRect)
-        myScrollView.isPagingEnabled = false
-        myScrollView.contentSize = CGSize(width: scrollViewRect.size.width * 3, height: scrollViewRect.size.height)
+        myScrollView.isPagingEnabled = true
+        myScrollView.contentSize = CGSize(width: scrollViewRect.size.width , height: scrollViewRect.size.height * 3)
         view.addSubview(myScrollView)
         
         var imageViewRect = self.view.bounds
         let imageView = self.newImageViewWithImage(paramImage: image1!, paramFrame: imageViewRect)
         myScrollView.addSubview(imageView)
         
-        imageViewRect.origin.x += imageViewRect.size.width
+        imageViewRect.origin.y += imageViewRect.size.height
         let imageView2 = self.newImageViewWithImage(paramImage: image2!, paramFrame: imageViewRect)
         myScrollView.addSubview(imageView2)
         
-        imageViewRect.origin.x += imageViewRect.size.width
+        imageViewRect.origin.y += imageViewRect.size.height
         let imageView3 = self.newImageViewWithImage(paramImage: image3!, paramFrame: imageViewRect)
         myScrollView.addSubview(imageView3)
         
