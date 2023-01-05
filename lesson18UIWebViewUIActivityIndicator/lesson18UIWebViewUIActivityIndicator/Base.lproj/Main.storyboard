@@ -21,33 +21,53 @@
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-53-NXE">
-                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <rect key="frame" x="-1" y="773" width="394" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem title="Item" image="arrowshape.turn.up.backward" catalog="system" id="4Fn-bx-HOR">
                                         <color key="tintColor" red="0.91516831669999998" green="0.93970959600000004" blue="0.79000190660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="goBackAction:" destination="BYZ-38-t0r" id="2Dk-Tb-ayG"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="C72-lL-cmi"/>
                                     <barButtonItem title="Item" image="arrowshape.turn.up.forward" catalog="system" id="HhM-p5-GaD">
                                         <color key="tintColor" red="0.91516831669999998" green="0.93970959600000004" blue="0.79000190660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="BYZ-38-t0r" id="itx-QO-157"/>
+                                        </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="gtM-Si-Re5"/>
                                     <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="VEW-8k-bn4">
                                         <color key="tintColor" red="0.91516831669999998" green="0.93970959600000004" blue="0.79000190660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="refreshAction:" destination="BYZ-38-t0r" id="hCa-j8-fDl"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-jG-u7n">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                         <constraints>
                             <constraint firstItem="32b-XB-9Pk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GXB-Au-GTV"/>
+                            <constraint firstItem="vbx-jG-u7n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4B-kZ-lBW"/>
+                            <constraint firstItem="vbx-jG-u7n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dmV-rz-8tQ"/>
                             <constraint firstItem="32b-XB-9Pk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nbI-ti-0eF"/>
                             <constraint firstItem="32b-XB-9Pk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qts-Po-WwN"/>
                             <constraint firstItem="32b-XB-9Pk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rqb-M1-O1n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activity" destination="vbx-jG-u7n" id="PDn-0u-fdl"/>
+                        <outlet property="goBackItem" destination="4Fn-bx-HOR" id="uDe-jU-E97"/>
+                        <outlet property="goForwardItem" destination="HhM-p5-GaD" id="w2F-sH-Edk"/>
+                        <outlet property="webView" destination="32b-XB-9Pk" id="bNy-H6-osn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
