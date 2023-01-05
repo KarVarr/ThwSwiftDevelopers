@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,13 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32b-XB-9Pk">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-53-NXE">
-                                <rect key="frame" x="-1" y="773" width="394" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-53-NXE">
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gye-eO-Wnz"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem title="Item" image="arrowshape.turn.up.backward" catalog="system" id="4Fn-bx-HOR">
                                         <color key="tintColor" red="0.91516831669999998" green="0.93970959600000004" blue="0.79000190660000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,23 +47,35 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-jG-u7n">
                                 <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
                             </activityIndicatorView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-E3-0mF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="715"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="32b-XB-9Pk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="GXB-Au-GTV"/>
-                            <constraint firstItem="vbx-jG-u7n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K4B-kZ-lBW"/>
-                            <constraint firstItem="vbx-jG-u7n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dmV-rz-8tQ"/>
-                            <constraint firstItem="32b-XB-9Pk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nbI-ti-0eF"/>
-                            <constraint firstItem="32b-XB-9Pk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qts-Po-WwN"/>
-                            <constraint firstItem="32b-XB-9Pk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rqb-M1-O1n"/>
+                            <constraint firstItem="m5C-E3-0mF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3Y8-oa-czP"/>
+                            <constraint firstItem="5Ph-53-NXE" firstAttribute="centerX" secondItem="vbx-jG-u7n" secondAttribute="centerX" id="4Ie-HY-Kwf"/>
+                            <constraint firstItem="vbx-jG-u7n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCA-D0-2JF"/>
+                            <constraint firstItem="5Ph-53-NXE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="M3H-hd-9az"/>
+                            <constraint firstItem="5Ph-53-NXE" firstAttribute="top" secondItem="m5C-E3-0mF" secondAttribute="bottom" id="WeO-HA-Owh"/>
+                            <constraint firstItem="vbx-jG-u7n" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dkH-Tg-pGl"/>
+                            <constraint firstItem="m5C-E3-0mF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fvY-lK-Ede"/>
+                            <constraint firstItem="5Ph-53-NXE" firstAttribute="trailing" secondItem="m5C-E3-0mF" secondAttribute="trailing" id="lF5-fY-IMi"/>
+                            <constraint firstItem="m5C-E3-0mF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mh7-fz-Py0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Ph-53-NXE" secondAttribute="bottom" id="p3W-b9-Nxq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activity" destination="vbx-jG-u7n" id="PDn-0u-fdl"/>
                         <outlet property="goBackItem" destination="4Fn-bx-HOR" id="uDe-jU-E97"/>
                         <outlet property="goForwardItem" destination="HhM-p5-GaD" id="w2F-sH-Edk"/>
-                        <outlet property="webView" destination="32b-XB-9Pk" id="bNy-H6-osn"/>
+                        <outlet property="webView" destination="m5C-E3-0mF" id="Jyz-q8-ZOe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,8 +87,5 @@
         <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="arrowshape.turn.up.backward" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="104"/>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
+class ViewController: UIViewController  {
     
     
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var goBackItem: UIBarButtonItem!
     @IBOutlet weak var goForwardItem: UIBarButtonItem!
     @IBOutlet weak var activity: UIActivityIndicatorView!
@@ -20,17 +21,15 @@ class ViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        webView.delegate = self
-        webView.scalesPageToFit = false
+        
         guard let url = URL(string: "https://www.google.com") else {return}
         let request = URLRequest(url: url)
-        webView.loadRequest(request)
+        webView.load(request)
         
         activity.style = .large
     }
     
     func isWorkIndicator(isAnimated: Bool, indicator: UIActivityIndicatorView) {
-        application.isNetworkActivityIndicatorVisible = isAnimated
         if isAnimated {
             activity.startAnimating()
             activity.isHidden = false
@@ -41,12 +40,12 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     
-    func webViewDidStartLoad(_ webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: WKWebView) {
         isWorkIndicator(isAnimated: true, indicator: activity)
         self.goBackItem.isEnabled = false
         self.goForwardItem.isEnabled = false
     }
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: WKWebView) {
         isWorkIndicator(isAnimated: false, indicator: activity)
         if webView.canGoBack {
             self.goBackItem.isEnabled = true
@@ -55,8 +54,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
             self.goForwardItem.isEnabled = true
         }
     }
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebView.NavigationType) -> Bool {
-        print("shouldStartLoadWith \(request)")
+    func webView(_ webView: WKWebView, shouldStartLoadWith request: URLRequest) -> Bool {
         return true
     }
     
