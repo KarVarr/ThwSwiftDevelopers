@@ -14,6 +14,8 @@
 		17AFC2FB29685E750074C4DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17AFC2FA29685E750074C4DE /* Assets.xcassets */; };
 		17AFC2FE29685E750074C4DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AFC2FC29685E750074C4DE /* LaunchScreen.storyboard */; };
 		17AFC306296860430074C4DE /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AFC305296860430074C4DE /* MyViewController.swift */; };
+		17AFC309296864470074C4DE /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AFC308296864470074C4DE /* CarViewController.swift */; };
+		17AFC30B296866A00074C4DE /* CarsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AFC30A296866A00074C4DE /* CarsHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		17AFC2FD29685E750074C4DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17AFC2FF29685E750074C4DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17AFC305296860430074C4DE /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		17AFC308296864470074C4DE /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
+		17AFC30A296866A00074C4DE /* CarsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,9 @@
 		17AFC2F029685E740074C4DE /* lesson20UIPageViewController */ = {
 			isa = PBXGroup;
 			children = (
+				17AFC307296862B80074C4DE /* PageVC */,
 				17AFC2F129685E740074C4DE /* AppDelegate.swift */,
 				17AFC2F329685E740074C4DE /* SceneDelegate.swift */,
-				17AFC305296860430074C4DE /* MyViewController.swift */,
 				17AFC2F529685E740074C4DE /* ViewController.swift */,
 				17AFC2F729685E740074C4DE /* Main.storyboard */,
 				17AFC2FA29685E750074C4DE /* Assets.xcassets */,
@@ -68,6 +72,16 @@
 				17AFC2FF29685E750074C4DE /* Info.plist */,
 			);
 			path = lesson20UIPageViewController;
+			sourceTree = "<group>";
+		};
+		17AFC307296862B80074C4DE /* PageVC */ = {
+			isa = PBXGroup;
+			children = (
+				17AFC305296860430074C4DE /* MyViewController.swift */,
+				17AFC308296864470074C4DE /* CarViewController.swift */,
+				17AFC30A296866A00074C4DE /* CarsHelper.swift */,
+			);
+			path = PageVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17AFC309296864470074C4DE /* CarViewController.swift in Sources */,
 				17AFC2F629685E740074C4DE /* ViewController.swift in Sources */,
 				17AFC2F229685E740074C4DE /* AppDelegate.swift in Sources */,
 				17AFC306296860430074C4DE /* MyViewController.swift in Sources */,
+				17AFC30B296866A00074C4DE /* CarsHelper.swift in Sources */,
 				17AFC2F429685E740074C4DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

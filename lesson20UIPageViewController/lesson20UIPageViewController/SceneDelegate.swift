@@ -10,14 +10,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let pageVC = MyViewController()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
       
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: <#T##UIViewController#>)
+        window?.rootViewController = UINavigationController(rootViewController: pageVC)
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }
