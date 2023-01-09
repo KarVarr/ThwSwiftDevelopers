@@ -193,3 +193,47 @@ date = "30.12.2023"
 let age : String = "20"
 //print(Int(age))
 
+//MARK: - lesson 8 switch if else break
+
+for i in 0...200 {
+    if i == 15 {
+        break
+    }
+    //print(i)
+}
+
+var day = 6
+
+//if day == 1 {
+//    print("weekday")
+//} else if day == 2 {
+//    print("weekday")
+//}  else if day == 3 {
+//    print("weekday")
+//}  else if day == 4 {
+//    print("weekday")
+//}  else if day == 5 {
+//    print("weekday")
+//}  else if day == 6 {
+//    print("weekend")
+//}  else if day == 7 {
+//    print("weekend")
+//}
+
+//switch day {
+//case 1...5: print("weekday")
+//case 5...7: print("weekend")
+//default: break
+//}
+
+let nameWork = "Swift dev"
+let ageSwift = 51
+let peopleSex = "M"
+
+//switch(nameWork, ageSwift) {
+//case(_, 1...17): print( "forbidden to work" )
+//case("Swift dev", 18...50) where peopleSex == "W": print("no women in our company mother fuckers")
+//case("Swift dev", 18...50) where peopleSex == "M": print ("offer is your's")
+//case let (name, age): print("\(name) in \(age) ?") // value banding
+//default: break
+//}
