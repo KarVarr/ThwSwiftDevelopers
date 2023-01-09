@@ -316,3 +316,31 @@ func generalFunc(answer: Bool) -> () -> String {
 
 
 generalFunc(answer: true)()
+
+//MARK: - lesson 10 Closure
+
+func nameF(a: String) {
+    
+}
+
+let names = ["Bob", "Anna", "Jack", "Den", "Ben", "Dr.Martin", "any"]
+
+let s = names.sorted()
+
+let t1 = names.sorted { s1, s2 in
+    return s1 < s2
+}
+let t3 = names.sorted { s1, s2 in
+    return s1.count < s2.count
+}
+
+let t2 = names.sorted(by: <)
+
+func makeHello (string: String) -> (String) -> String {
+    return {(name: String) -> String in return (string + " " + name)}
+}
+
+var nameForHello = makeHello(string: "Hey")
+nameForHello("Karen")
+
+//MARK: - lesson 11 
