@@ -237,3 +237,82 @@ let peopleSex = "M"
 //case let (name, age): print("\(name) in \(age) ?") // value banding
 //default: break
 //}
+
+
+//MARK: - lesson 9 Function
+
+// 1 way
+var dairyArray = [String]()
+
+let nameStudent1 = "Vova"
+let occupation1 = "WebDev"
+
+dairyArray.append(nameStudent1)
+dairyArray.append(occupation1)
+
+let nameStudent2 = "Koly"
+let occupation2 = "Artist"
+
+dairyArray.append(nameStudent2)
+dairyArray.append(occupation2)
+
+let nameStudent3 = "Toly"
+let occupation3 = "Doctor"
+
+dairyArray.append(nameStudent3)
+dairyArray.append(occupation3)
+
+dairyArray
+
+// 2 way
+
+var dairyArray2 = [String]()
+
+func addStudents(name: String, occupation: String) -> Void {
+    dairyArray2.append(name)
+    dairyArray2.append(occupation)
+}
+
+addStudents(name: "Bublic", occupation: "Police")
+addStudents(name: "Matvei", occupation: "Moping")
+addStudents(name: "Anton", occupation: "Admin")
+
+dairyArray2
+
+
+func calc (number1: Int, number2: Int) -> Int {
+    
+    return number1 + number2
+}
+
+let sum = calc(number1: 4, number2: 90)
+sum
+
+var money = [1, 2, 44, 65,77,3,5,6,7,99,45,2]
+var money2 = [1, 2, 43, 65,747,3,50,46,7,99,445,21]
+
+func calculate(inArray: [Int]) -> Int {
+    var sum = 0
+    for i in inArray {
+        sum += i
+    }
+    return sum
+}
+calculate(inArray: money)
+calculate(inArray: money2)
+money.reduce(0, +) // reduce
+
+
+func generalFunc(answer: Bool) -> () -> String {
+    func sayYes() -> String{
+        return "Yes"
+    }
+    func sayNo() -> String {
+        return "No"
+    }
+    
+    return answer ? sayYes : sayNo
+}
+
+
+generalFunc(answer: true)()
