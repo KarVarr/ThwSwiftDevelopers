@@ -1,9 +1,9 @@
 import UIKit
 
-var name1 = "alex"
+var name1 = "Alex"
 name1 = "karen"
 name1
-var name2 = "suzanna"
+var name2 = "Suzanne"
 //print(name1 + " " + "dev" + " " + name2 + "  " + "teacher")
 
 //MARK: - lesson 2 base types
@@ -161,4 +161,35 @@ var dict2 = ["mouse": "logitech", "car": "BMW", "phone": "iPhone"]
 //for (key, value) in dict2 {
 //    print("\(key), value = \(value)")
 //}
+
+//MARK: - lesson 7 Optional
+
+
+var date: String?
+
+date = "30.12.2023"
+
+//print(date)
+
+//if date != nil {
+//    print("current date = \(date)")
+//} else {
+//    print("no date")
+//}
+
+//if let unwrappedDate = date {
+//    print(unwrappedDate)
+//} else {
+//    print("no date")
+//}
+
+//print(date!) //bad solution
+//if date != nil {
+//    date!
+//} else {
+//    print("no date")
+//}
+
+let age : String = "20"
+//print(Int(age))
 
