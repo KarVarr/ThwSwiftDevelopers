@@ -117,3 +117,48 @@ let (name11, name22, name33) = ("one", "two", "three")
 name11
 name22
 
+//MARK: - Dictionary
+
+let dic1: [Int: String] = [0: "zero", 1: "one"]
+dic1
+
+let dic2: Dictionary<String, Double> = ["one": 1.0, "two": 2.0]
+dic2
+
+let dic3 = [0: "zero", 1: "one"]
+dic3[0]
+dic3.keys
+dic3.values
+//print( dic3.enumerated().map{"keys\($1) and values\($0)"} )
+
+var dict = ["car": "mers", "phone": "iPhone"]
+dict.count
+dict.description
+dict.isEmpty
+
+var namesOfIntegers = [Int: String]() // empty dict
+var namesOfIntegers2 : [Int: String] = [:] // empty dict
+namesOfIntegers.isEmpty
+
+dict["mouse"] = "logitech"
+dict
+dict.updateValue("BMW", forKey: "car")
+dict
+
+dict["car"] = nil
+dict
+dict.removeValue(forKey: "phone")
+dict
+dict = [:] // remove All
+dict
+
+var dict2 = ["mouse": "logitech", "car": "BMW", "phone": "iPhone"]
+
+//for key in dict2.keys {
+//    print("\(key), value = \(dict2[key]!)")
+//}
+
+//for (key, value) in dict2 {
+//    print("\(key), value = \(value)")
+//}
+
