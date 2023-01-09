@@ -63,3 +63,36 @@ a.count
 a.hasPrefix("h")
 a.hasSuffix("ld")
 
+//MARK: - lesson 4 array
+
+let constArray = ["a", "b","c","d"]
+let constArray2: [String] = ["a", "b","c","d"]
+constArray.count
+
+var array = [String]()
+
+//if array.count == 0 {
+//    print("array is empty")
+//}
+//if array.isEmpty {
+//    print("array is empty")
+//}
+
+array += constArray
+array + ["e"] // no save new element in array
+array.append("f")
+array += ["e"]
+array.append("f")
+array
+
+array[1]
+array[1...4]
+array[1..<4]
+
+array.insert("-", at: 3)
+array.remove(at: 3)
+array
+array.removeLast()
+array.removeFirst()
+array
+
