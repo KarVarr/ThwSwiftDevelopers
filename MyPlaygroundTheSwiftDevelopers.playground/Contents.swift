@@ -96,3 +96,24 @@ array.removeLast()
 array.removeFirst()
 array
 
+//MARK: - lesson 5 tuples
+
+let oneTuple: (Int, String, Double, Bool) = (1,"ten", 25.5, true)
+let oneTuple2 = (1,"ten", 25.5, true)
+let (numberValue, nameValue, decimalValue, boolValue) = oneTuple
+nameValue
+
+let (_, _, cTuple ,_) = oneTuple
+cTuple
+
+oneTuple.0
+oneTuple.2
+
+let tuple1 = (one:1, nameTwo: "ten", boolThree: true) //предпочтительный вариант
+tuple1.one
+tuple1.0
+
+let (name11, name22, name33) = ("one", "two", "three")
+name11
+name22
+
