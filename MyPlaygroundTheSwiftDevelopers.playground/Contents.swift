@@ -29,3 +29,37 @@ var booleanFalse = false
 if booleanFalse == true {
     print("true Hello")
 }
+
+//MARK: - lesson 3 strings
+
+var str1 = "string"
+var str2: String = "string"
+var a = ""
+var b = String()
+
+a = "hello"
+b = "world"
+
+//print(a + " " + b)
+
+var number = 10
+//print("number \(number)")
+
+var char: Character = "x"
+
+str1 + String(char)
+str2.append(char)
+
+//  ИТЕРАЦИЯ
+//for c in "hello max" {
+//    print (c)
+//}
+
+a = a + b
+a += b
+
+a.count
+
+a.hasPrefix("h")
+a.hasSuffix("ld")
+
