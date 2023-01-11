@@ -421,7 +421,7 @@ class ParentsClass {
 
 class Son: ParentsClass {
     func method(name: String) {
-        print("Hello, \(name)")
+        //print("Hello, \(name)")
     }
 }
 
@@ -434,3 +434,51 @@ sonClass.age = 12
 sonClass.name
 
 
+struct NameStruct {
+    var name: String
+    var age: Int
+}
+
+var str = NameStruct(name: "nana", age: 11)
+str.name = "fafa"
+str.name
+
+//MARK: - lesson 13 Property
+
+struct Observer {
+    var name: String {
+        willSet {
+            //print(newValue)
+        }
+        didSet {
+            //print(oldValue)
+            name = name.uppercased()
+        }
+    }
+    
+}
+
+var obser = Observer(name: "Jack")
+
+obser.name // getter
+obser.name = "Sven" // setter
+obser.name
+
+struct ComputerProperty {
+    var firstName: String
+    var lastName: String
+    
+    var fullName: String {
+        get {
+            firstName.capitalized + " " + lastName.capitalized
+        }
+        
+        set {
+            print("setter worked \(newValue)")
+        }
+    }
+}
+
+var comp = ComputerProperty(firstName: "Karen", lastName: "vardanian")
+
+comp.fullName
