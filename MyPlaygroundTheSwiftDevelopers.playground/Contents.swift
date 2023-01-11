@@ -482,3 +482,43 @@ struct ComputerProperty {
 var comp = ComputerProperty(firstName: "Karen", lastName: "vardanian")
 
 comp.fullName
+
+
+//MARK: - lesson 14 Property Type
+
+struct MyStruct {
+    
+    static var count = 0
+    var name = String()
+    
+    init(name: String) {
+        self.name = name
+        MyStruct.count += 1
+    }
+}
+
+var structTest1 = MyStruct(name: "Jack")
+var structTest2 = MyStruct(name: "Sem")
+var structTest3 = MyStruct(name: "Anna")
+var structTest4 = MyStruct(name: "Bob")
+MyStruct.count
+
+
+class AgeBoy {
+    
+    static var ageMax = 15
+    var name: String = ""
+    var age = 7 {
+        didSet {
+            if age > AgeBoy.ageMax {
+                age = oldValue
+            }
+        }
+    }
+}
+
+var ageClass = AgeBoy()
+ageClass.name = "Ivan"
+ageClass.age = 5
+ageClass.age
+
