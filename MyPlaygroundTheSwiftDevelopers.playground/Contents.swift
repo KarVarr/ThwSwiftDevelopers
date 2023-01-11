@@ -522,3 +522,49 @@ ageClass.name = "Ivan"
 ageClass.age = 5
 ageClass.age
 
+//MARK: - lesson 15 Subscript
+
+struct Table {
+    var multi: Int
+    subscript(index: Int) -> Int {
+        get {
+            
+            return multi * index
+        }
+    }
+}
+
+var tableResult = Table(multi: 3)
+tableResult[10]
+
+struct Man {
+    var man1 = "hello"
+    var man2 = "i'm grood"
+    var man3 = "Hi"
+    
+    
+    subscript(index: Int) -> String? {
+        get {
+            switch index {
+            case 0: return man1
+            case 1: return man2
+            case 2: return man3
+            default:
+                return "empty"
+            }
+        }
+        set {
+            switch index {
+            case 0: return man1 = newValue ?? ""
+            case 1: return man2 = newValue ?? ""
+            case 2: return man3 = newValue ?? ""
+            default:
+                break
+            }
+        }
+    }
+}
+
+
+var say = Man()
+say[0]
