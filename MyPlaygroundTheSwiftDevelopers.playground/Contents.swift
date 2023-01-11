@@ -343,4 +343,94 @@ func makeHello (string: String) -> (String) -> String {
 var nameForHello = makeHello(string: "Hey")
 nameForHello("Karen")
 
-//MARK: - lesson 11 
+//MARK: - lesson 11 enum
+
+enum TravelClass {
+    case First, Business, Economy
+}
+
+let travel = TravelClass.First
+
+let travel2 = TravelClass.self
+travel2.First
+
+
+enum Medal {
+    case gold
+    case silver
+    case bronze
+}
+
+let medal = Medal.gold
+
+switch medal {
+case .gold: 5
+case .silver: 3
+case .bronze: 1
+}
+
+enum Weekdays {
+    case Monday
+    case Tuesday
+    case Wednesday
+    case Thursday
+    enum Friday {
+        case day
+        case night
+    }
+    case Saturday
+    case Sunday
+    
+}
+
+var friday = Weekdays.Friday.day
+
+enum Operation {
+    case double(Double)
+    case integer(Int)
+    case float(Float)
+    case string(String)
+}
+
+var dictionary: Dictionary<String, Operation> = [
+    "Double": .double(34.3),
+    "Integer": .integer(10),
+    "Float": .float(44.4),
+    "String": .string("hello")
+]
+
+dictionary["String"]
+dictionary["Float"]
+
+//MARK: - lesson 12 Class
+
+class ParentsClass {
+    var array = [String]()
+    
+    var name = ""
+    var age = 20
+    
+    
+    
+    
+    init(name: String, age: Int) {
+        self.name = name
+        self.age = age
+    }
+}
+
+class Son: ParentsClass {
+    func method(name: String) {
+        print("Hello, \(name)")
+    }
+}
+
+let sonClass = Son(name: "dudu", age: 44)  // экземпляр класса
+sonClass.name // свойства класса
+sonClass.method(name: "karen") // метод экземпляра класса
+
+sonClass.name = "bubu"
+sonClass.age = 12
+sonClass.name
+
+
