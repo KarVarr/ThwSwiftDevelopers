@@ -568,3 +568,86 @@ struct Man {
 
 var say = Man()
 say[0]
+
+
+//MARK: - lesson 16   OOP
+
+class People {
+    var name = "jon"
+    var lastName = "smith"
+    var fullName: String {
+        name + " " + lastName
+    }
+    
+    func printMethod() -> String {
+        "Your name = "
+    }
+    
+}
+
+class Man2: People {
+    
+    override func printMethod() -> String {
+        return super.printMethod() + "jack"
+    }
+}
+
+
+let people = People()
+people.name
+people.printMethod()
+let man = Man2()
+man.fullName
+man.printMethod()
+
+
+// ----- ИНКАПСУЛЯЦИЯ
+class Boys {
+    public var firstName = "bob"
+    private var lastName = "black"
+    final func printHi () {
+        print("Hi")
+    }
+}
+
+
+class Girls: Boys {
+    
+}
+
+let girls = Girls()
+girls.firstName
+
+
+// -----ПОЛИМОРФИЗМ
+class General  {
+    func methodHi() {
+        print("Hello General Method")
+    }
+    
+}
+
+class People1 : General {
+    override func methodHi() {
+        print("Hi People!")
+    }
+}
+
+class People2: General {
+    override func methodHi() {
+        print("Hi People2")
+    }
+}
+
+let general1 = General()
+let people1 = People1()
+let people2 = People2()
+
+
+
+var array1 = [general1, people1, people2]
+
+
+for obj in array1 {
+    obj.methodHi()
+}
