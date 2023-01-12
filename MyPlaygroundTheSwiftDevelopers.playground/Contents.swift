@@ -648,6 +648,107 @@ let people2 = People2()
 var array1 = [general1, people1, people2]
 
 
-for obj in array1 {
-    obj.methodHi()
+//for obj in array1 {
+//    obj.methodHi()
+//}
+
+
+//MARK: - lesson 17 ARC - automatic reference counting
+
+
+class Person2 {
+    var name : String
+    
+    init(name: String) {
+        self.name = name
+       // print("\(name) init and create in memory")
+    }
+    
+    deinit {
+        //print("\(name) deleted from memory")
+    }
 }
+
+var ref1: Person2?
+var ref2: Person2?
+var ref3: Person2?
+
+
+ref1 = Person2(name: "Jack")
+
+ref2 = ref1
+ref3 = ref1
+
+ref1 = nil
+ref2 = nil
+ref3 = nil
+
+//----цикл сильных ссылок или перекрестные ссылки
+
+class Hotel {
+    let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    var apartment : Apartment?
+    
+    deinit {
+       // print("\(name) is gone")
+    }
+}
+
+class Apartment {
+    let room: String
+    
+    init(room: String) {
+        self.room = room
+    }
+    
+   weak var hotel: Hotel?
+    
+    deinit {
+        //print("apartment \(room) is clear")
+    }
+}
+
+var objHotel: Hotel?
+var objApartment: Apartment?
+
+objHotel = Hotel(name: "John Smith")
+objApartment = Apartment(room: "122")
+
+objHotel!.apartment = objApartment
+objApartment!.hotel = objHotel
+
+objHotel = nil
+objApartment = nil
+
+
+//---- Бесхозная ссылка----unowned
+
+class Country {
+    let name: String
+    
+    var capitalCity: City!
+
+    init(name: String, capitalName: String) {
+        self.name = name
+        self.capitalCity = City(name: capitalName, country: self)
+    }
+}
+
+class City {
+    let name: String
+    
+   unowned let country: Country
+    
+    init(name: String, country: Country ) {
+        self.name = name
+        self.country = country
+    }
+}
+
+
+var country = Country(name: "Russia", capitalName: "Moscow")
