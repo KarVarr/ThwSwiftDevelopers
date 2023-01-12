@@ -752,3 +752,46 @@ class City {
 
 
 var country = Country(name: "Russia", capitalName: "Moscow")
+
+//MARK: - lesson 18 Optional chaining
+
+class Address {
+    let street = "Tverskay"
+    let number = 18
+}
+
+class Home {
+    let address = Address()
+    let room: Int? = 3
+    var parking: Parking? = Parking()
+    func printRoom()  {
+        print("the number of rooms is \(room)")
+    }
+}
+
+
+struct Parking {
+    var carPlace = 5
+}
+
+class Parents {
+    var cars: [String]? = ["Mercedes"]
+    var home: Home? = Home()
+}
+
+let parents = Parents()
+
+//parents.cars![0]
+//parents.home!.parking!.carPlace
+
+parents.home?.parking?.carPlace
+
+if (parents.home?.parking?.carPlace = 7) != nil {
+    print("setup")
+} else {
+    print("don't setup")
+}
+
+
+parents.cars![0]
+parents.cars?[0]
