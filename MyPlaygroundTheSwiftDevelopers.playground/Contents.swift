@@ -855,7 +855,7 @@ for value in mediaArray {
 
 extension String {
     func sayHello() {
-        print("Hello")
+        //print("Hello")
     }
 }
 
@@ -899,3 +899,68 @@ extension Vova {
 }
 var secondVova = Vova()
 secondVova.allSefl()
+
+
+//MARK: - lesson 21 Generic
+
+var stringArray = ["hi", "hello", "good bay"]
+var intArray = [1,2,3,4,5,6]
+var doubleArray = [1.2, 2.7, 3.6, 4.4 ,5.9, 6.1]
+
+func printStringFromArray(a: [String]) {
+    for s in a {
+        s
+    }
+}
+func printIntFromArray(a: [Int]) {
+    for s in a {
+        s
+    }
+}
+func printDoubleFromArray(a: [Double]) {
+    for s in a {
+        s
+    }
+}
+
+printStringFromArray(a: stringArray)
+printIntFromArray(a: intArray)
+printDoubleFromArray(a: doubleArray)
+// generic best
+func printElementFromArray <T> (a: [T]) {
+    for element in a {
+        element
+    }
+}
+
+printElementFromArray(a: stringArray)
+printElementFromArray(a: intArray)
+printElementFromArray(a: doubleArray)
+
+//---v2
+
+func doNothing <T> (x: T) -> T {
+    return x
+}
+
+doNothing(x: "Hello")
+doNothing(x: 5)
+doNothing(x: false)
+doNothing(x: 2.9)
+
+//---v3
+
+struct GenericArray <T> {
+    var item = [T]()
+    
+    mutating func push(i: T) {
+        item.append(i)
+    }
+}
+
+var myFriendsList = ["Bob", "Jack", "Sam"]
+
+var arrays = GenericArray(item: myFriendsList)
+arrays.push(i: "Bill")
+myFriendsList
+arrays.item
