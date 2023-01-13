@@ -964,3 +964,105 @@ var arrays = GenericArray(item: myFriendsList)
 arrays.push(i: "Bill")
 myFriendsList
 arrays.item
+
+//MARK: - lesson 22 Protocol
+
+protocol OneProtocol {
+    var name: String {get set}
+    var age: String {get set}
+    
+//   mutating func hello (text: String)
+}
+
+struct Parents2: OneProtocol {
+    var name: String
+    var age: String
+    
+}
+
+struct Kids: OneProtocol {
+    var name: String
+    var age: String
+}
+
+struct Cat: OneProtocol {
+    var name: String
+    var age: String
+}
+
+var parents1 = Parents2(name: "Jack", age: "28")
+var parents2 = Parents2(name: "Jenny", age: "25")
+var kids = Kids(name: "Any", age: "5")
+var cat = Cat(name: "Popi", age: "3")
+
+var arrProtocol: [Any] = [parents1, parents2, kids, cat]
+
+for value in arrProtocol {
+    if let parent = value as? Parents2 {
+        parent.name
+    } else if let kid = value as? Kids {
+        kid.name
+    }
+}
+
+
+var arrayProtocol : [OneProtocol] = [parents1, parents2, kids, cat]
+
+func sortFamily (array: [OneProtocol]) {
+    array.map{$0.name}
+    array.map{$0.age}
+}
+
+sortFamily(array: arrayProtocol)
+
+//MARK: - lesson 23 Delegate
+
+protocol RouterDelegate {
+    var nameID: [String] {get set}
+    func saveName(name: String, text: String)
+}
+
+protocol UsersProtocol {
+    var name: String {get set}
+    var age: Int {get set}
+    
+    var delegate: RouterDelegate? {get set}
+    
+    init(name: String, age: Int, delegate: RouterDelegate)
+    
+}
+
+class Router2: RouterDelegate {
+    var nameID: [String] = []
+    func saveName(name: String, text: String) {
+        nameID.append(name)
+        nameID.append(text)
+    }
+}
+
+class User: UsersProtocol {
+    var name: String
+    var age: Int
+    
+    var delegate: RouterDelegate?
+    
+    func sendMail(name: String, text: String) -> Bool {
+        delegate?.saveName(name: name, text: text)
+        return true
+    }
+    
+    required init(name: String, age: Int, delegate: RouterDelegate) {
+        self.name = name
+        self.age = age
+        self.delegate = delegate
+    }
+}
+
+
+let routerDelegate = Router2()
+
+let user = User(name: "John", age: 32, delegate: routerDelegate)
+user.sendMail(name: "Sergey", text: "Hello")
+user.sendMail(name: "People", text: "Hello All")
+
+routerDelegate.nameID
