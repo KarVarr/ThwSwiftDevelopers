@@ -787,11 +787,67 @@ let parents = Parents()
 parents.home?.parking?.carPlace
 
 if (parents.home?.parking?.carPlace = 7) != nil {
-    print("setup")
+    //print("setup")
 } else {
-    print("don't setup")
+    //print("don't setup")
 }
 
 
 parents.cars![0]
 parents.cars?[0]
+
+
+//MARK: - lesson 19 Type
+
+class Media {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}
+class Film: Media {
+    var director: String
+    
+    init(name: String, director: String) {
+        self.director = director
+        super.init(name: name)
+    }
+}
+class Music: Media {
+    var artist: String
+    
+    init(name: String, artist: String) {
+        self.artist = artist
+        super.init(name: name)
+    }
+}
+
+let mediaArray: [Media] = [
+    Film(name: "Casablanca", director: "Mickhail"),
+    Music(name: "Blue Shoes", artist: "Elvis Presley"),
+    Film(name: "Kane", director: "Citizen"),
+    Music(name: "Queen", artist: "Abba"),
+    Film(name: "Avatar", director: "Cameron"),
+]
+
+var count = (musicCount: 0, filmCount: 0)
+
+for obj in mediaArray {
+    if obj is Film {
+        count.filmCount += 1
+    } else if obj is Music {
+        count.musicCount += 1
+    }
+}
+
+count
+
+for value in mediaArray {
+    if let music = value as? Music {
+        print(music.artist)
+    } else if let film = value as? Music {
+        print(film.name)
+    }
+}
+
