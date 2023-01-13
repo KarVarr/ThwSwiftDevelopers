@@ -845,9 +845,57 @@ count
 
 for value in mediaArray {
     if let music = value as? Music {
-        print(music.artist)
+        music.artist
     } else if let film = value as? Music {
-        print(film.name)
+        film.name
     }
 }
 
+//MARK: - lesson 20 Extension
+
+extension String {
+    func sayHello() {
+        print("Hello")
+    }
+}
+
+var hello = "hi"
+hello.sayHello()
+
+var a111 = String()
+a.sayHello()
+
+"hi".sayHello()
+
+extension Int {
+    var square: Int {
+        return (self * self)
+    }
+}
+
+var newInt = 340
+newInt.square
+
+extension Int {
+    func funcSquare () -> Int {
+        return (self * self)
+    }
+}
+
+var sqrInt = 3
+sqrInt.funcSquare()
+
+class Vova {
+    var nick = "the swift dev"
+}
+
+let realVova = Vova()
+realVova.nick
+
+extension Vova {
+    func allSefl () -> String {
+        return "my name is Vova, my nick \(nick)"
+    }
+}
+var secondVova = Vova()
+secondVova.allSefl()
