@@ -2,9 +2,11 @@
 ## The Swift Developers lessons!
 
 <div align="center">
-<img src="https://media.giphy.com/media/QHE5gWI0QjqF2/giphy.gif" alt="gif" width="600" />
+  <img src="https://media.giphy.com/media/FlPJcTplkfefDCKq2b/giphy.gif" alt="gif" width="600" />
 </div>
+
 ---
+
 ### Completed course swift for beginners and UIkit
 - MVC
 - UIAlertController | Alert
