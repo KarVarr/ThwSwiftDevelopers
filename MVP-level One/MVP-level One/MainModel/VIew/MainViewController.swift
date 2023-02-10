@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         
     }
 
-    
+    //MARK: - IBAction
     @IBAction func didTapButtonAction(_ sender: Any) {
         self.presenter.showGreeting()
     }
