@@ -16,6 +16,11 @@ class MyViewController : UIViewController {
         title = "VC 1"
         view.backgroundColor = .lightGray
         
+        afterBlock(seconds: 3, queue: DispatchQueue(label: "CustomQueue")) {
+            print("hello pipo")
+            print(Thread.isMainThread)
+            print(Thread.current)
+        }
         
     }
     
@@ -24,9 +29,10 @@ class MyViewController : UIViewController {
         initButton()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        print("didDisapear")
+    private func afterBlock(seconds: Int, queue: DispatchQueue = DispatchQueue.global(), completion: @escaping () -> ()) {
+        queue.asyncAfter(deadline: .now() + .seconds(seconds)) {
+            completion()
+        }
     }
     
     @IBAction func pressAction() {
