@@ -39,7 +39,5 @@ class MainViewController: UIViewController {
         
         view.addSubview(tableView)
     }
-
-
 }
 

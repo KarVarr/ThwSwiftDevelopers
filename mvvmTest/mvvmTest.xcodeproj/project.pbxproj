@@ -14,6 +14,7 @@
 		1750841B2C6E5C19004B2EBD /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1750841A2C6E5C19004B2EBD /* Base */; };
 		1793B8482C6E730600BB9B3D /* MainViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8472C6E730600BB9B3D /* MainViewController + TableView.swift */; };
 		1793B84A2C6E734700BB9B3D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8492C6E734700BB9B3D /* MainViewModel.swift */; };
+		1793B84D2C6E77BF00BB9B3D /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B84C2C6E77BF00BB9B3D /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1750841C2C6E5C19004B2EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1793B8472C6E730600BB9B3D /* MainViewController + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController + TableView.swift"; sourceTree = "<group>"; };
 		1793B8492C6E734700BB9B3D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1793B84C2C6E77BF00BB9B3D /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				175084252C6E5E31004B2EBD /* Model */,
 				175084242C6E5E2A004B2EBD /* View */,
 				175084262C6E5EC6004B2EBD /* ViewModel */,
+				1793B84B2C6E77AA00BB9B3D /* Network */,
 				175084222C6E5C75004B2EBD /* Resources */,
 			);
 			path = mvvmTest;
@@ -108,6 +111,14 @@
 				1793B8492C6E734700BB9B3D /* MainViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1793B84B2C6E77AA00BB9B3D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1793B84C2C6E77BF00BB9B3D /* EndPoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1793B84D2C6E77BF00BB9B3D /* EndPoint.swift in Sources */,
 				1793B84A2C6E734700BB9B3D /* MainViewModel.swift in Sources */,
 				175084132C6E5C16004B2EBD /* MainViewController.swift in Sources */,
 				1793B8482C6E730600BB9B3D /* MainViewController + TableView.swift in Sources */,
