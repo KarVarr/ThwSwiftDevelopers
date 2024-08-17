@@ -20,6 +20,7 @@
 		1793B8542C70A01900BB9B3D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8532C70A01900BB9B3D /* NetworkError.swift */; };
 		1793B8562C70A05900BB9B3D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8552C70A05900BB9B3D /* NetworkRequest.swift */; };
 		1793B8582C70A1F400BB9B3D /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */; };
+		1793B85B2C70AAED00BB9B3D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B85A2C70AAED00BB9B3D /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1793B8532C70A01900BB9B3D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1793B8552C70A05900BB9B3D /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		1793B85A2C70AAED00BB9B3D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				175084242C6E5E2A004B2EBD /* View */,
 				175084262C6E5EC6004B2EBD /* ViewModel */,
 				1793B84B2C6E77AA00BB9B3D /* Network */,
+				1793B8592C70AACD00BB9B3D /* Helpers */,
 				1793B84E2C709C2B00BB9B3D /* Extentions */,
 				175084222C6E5C75004B2EBD /* Resources */,
 			);
@@ -142,6 +145,14 @@
 				1793B8512C709E4F00BB9B3D /* URLSession + Extentions.swift */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		1793B8592C70AACD00BB9B3D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1793B85A2C70AAED00BB9B3D /* Observable.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +229,7 @@
 				1793B84A2C6E734700BB9B3D /* MainViewModel.swift in Sources */,
 				175084132C6E5C16004B2EBD /* MainViewController.swift in Sources */,
 				1793B8522C709E4F00BB9B3D /* URLSession + Extentions.swift in Sources */,
+				1793B85B2C70AAED00BB9B3D /* Observable.swift in Sources */,
 				1793B8562C70A05900BB9B3D /* NetworkRequest.swift in Sources */,
 				1793B8482C6E730600BB9B3D /* MainViewController + TableView.swift in Sources */,
 				1750840F2C6E5C16004B2EBD /* AppDelegate.swift in Sources */,
