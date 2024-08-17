@@ -22,7 +22,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func registerCell() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(MainCell.self, forCellReuseIdentifier: MainCell.identifier)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,9 +33,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         mainViewModel.numberOfRows(section)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "cell",
+            withIdentifier: MainCell.identifier,
             for: indexPath
         ) as? MainCell else { return UITableViewCell()}
         
@@ -44,5 +48,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let dataSource = mainViewModel.dataSource else { return }
+        presentDetailsViewController(user: dataSource[indexPath.row])
+    }
     
 }

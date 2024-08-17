@@ -9,6 +9,9 @@ import UIKit
 
 
 class MainCell: UITableViewCell {
+    static var identifier: String {
+        "MainCell"
+    }
     private let nameLabel = UILabel()
     private let emailLabel = UILabel()
     private var labelsStackView = UIStackView()

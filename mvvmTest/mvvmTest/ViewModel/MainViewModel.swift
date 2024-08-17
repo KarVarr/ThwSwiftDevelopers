@@ -10,7 +10,7 @@ import Foundation
 class MainViewModel {
     var isLoading: Observable<Bool> = Observable(false)
     var cellDataSource: Observable<[MainCellViewModel]> = Observable(nil)
-    var dataSource: [Users]?
+    var dataSource: [User]?
     
     
     func numberOfSections() -> Int {
