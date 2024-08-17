@@ -21,6 +21,8 @@
 		1793B8562C70A05900BB9B3D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8552C70A05900BB9B3D /* NetworkRequest.swift */; };
 		1793B8582C70A1F400BB9B3D /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */; };
 		1793B85B2C70AAED00BB9B3D /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B85A2C70AAED00BB9B3D /* Observable.swift */; };
+		1793B85D2C70B9EA00BB9B3D /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B85C2C70B9EA00BB9B3D /* MainCell.swift */; };
+		1793B85F2C70BB5800BB9B3D /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B85E2C70BB5800BB9B3D /* MainCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		1793B8552C70A05900BB9B3D /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 		1793B85A2C70AAED00BB9B3D /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		1793B85C2C70B9EA00BB9B3D /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		1793B85E2C70BB5800BB9B3D /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			children = (
 				175084122C6E5C16004B2EBD /* MainViewController.swift */,
 				1793B8472C6E730600BB9B3D /* MainViewController + TableView.swift */,
+				1793B85C2C70B9EA00BB9B3D /* MainCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				1793B8492C6E734700BB9B3D /* MainViewModel.swift */,
+				1793B85E2C70BB5800BB9B3D /* MainCellViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -228,8 +234,10 @@
 				1793B84D2C6E77BF00BB9B3D /* EndPoint.swift in Sources */,
 				1793B84A2C6E734700BB9B3D /* MainViewModel.swift in Sources */,
 				175084132C6E5C16004B2EBD /* MainViewController.swift in Sources */,
+				1793B85F2C70BB5800BB9B3D /* MainCellViewModel.swift in Sources */,
 				1793B8522C709E4F00BB9B3D /* URLSession + Extentions.swift in Sources */,
 				1793B85B2C70AAED00BB9B3D /* Observable.swift in Sources */,
+				1793B85D2C70B9EA00BB9B3D /* MainCell.swift in Sources */,
 				1793B8562C70A05900BB9B3D /* NetworkRequest.swift in Sources */,
 				1793B8482C6E730600BB9B3D /* MainViewController + TableView.swift in Sources */,
 				1750840F2C6E5C16004B2EBD /* AppDelegate.swift in Sources */,

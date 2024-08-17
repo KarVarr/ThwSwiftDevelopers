@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     let mainViewModel = MainViewModel()
     let activityIndicator = UIActivityIndicatorView()
-    var cellDataSource = [Users]()
+    var cellDataSource = [MainCellViewModel]()
     
     let tableView: UITableView = {
        let tableView = UITableView()
