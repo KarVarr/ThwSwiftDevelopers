@@ -60,6 +60,7 @@
 		1750840D2C6E5C16004B2EBD /* mvvmTest */ = {
 			isa = PBXGroup;
 			children = (
+				1793B84E2C709C2B00BB9B3D /* New Group */,
 				175084232C6E5E1C004B2EBD /* Application */,
 				175084252C6E5E31004B2EBD /* Model */,
 				175084242C6E5E2A004B2EBD /* View */,
@@ -119,6 +120,13 @@
 				1793B84C2C6E77BF00BB9B3D /* EndPoint.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1793B84E2C709C2B00BB9B3D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
