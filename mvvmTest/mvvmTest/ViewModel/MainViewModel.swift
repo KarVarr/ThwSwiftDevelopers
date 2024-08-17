@@ -8,21 +8,33 @@
 import Foundation
 
 class MainViewModel {
+    var isLoading: Observable<Bool> = Observable(false)
+    var cellDataSource: Observable<[Users]> = Observable(nil)
+    var dataSource: [Users]?
+    
+    
     func numberOfSections() -> Int {
         return 1
     }
     
     func numberOfRows(_ section: Int) -> Int {
-        return 10
+        return dataSource?.count ?? 0
     }
     
     func getUsers() {
-        NetworkDataFetch.shared.fetchUsers { users, error in
-            if error != nil {
-                print("notify user")
-            } else if let users {
-                print(users.count)
+        isLoading.value = true
+
+        NetworkDataFetch.shared.fetchUsers {[weak self] users, error in
+            guard let self else { return }
+            self.isLoading.value = false
+            if let users {
+                self.dataSource = users
+                mapCellData()
             }
         }
+    }
+    
+    func mapCellData() {
+        cellDataSource.value = dataSource
     }
 }
