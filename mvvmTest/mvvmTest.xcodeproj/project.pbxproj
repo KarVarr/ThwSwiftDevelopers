@@ -19,6 +19,7 @@
 		1793B8522C709E4F00BB9B3D /* URLSession + Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8512C709E4F00BB9B3D /* URLSession + Extentions.swift */; };
 		1793B8542C70A01900BB9B3D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8532C70A01900BB9B3D /* NetworkError.swift */; };
 		1793B8562C70A05900BB9B3D /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8552C70A05900BB9B3D /* NetworkRequest.swift */; };
+		1793B8582C70A1F400BB9B3D /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		1793B8512C709E4F00BB9B3D /* URLSession + Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession + Extentions.swift"; sourceTree = "<group>"; };
 		1793B8532C70A01900BB9B3D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		1793B8552C70A05900BB9B3D /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				1793B84C2C6E77BF00BB9B3D /* EndPoint.swift */,
 				1793B8532C70A01900BB9B3D /* NetworkError.swift */,
 				1793B8552C70A05900BB9B3D /* NetworkRequest.swift */,
+				1793B8572C70A1F400BB9B3D /* NetworkDataFetch.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				1793B8562C70A05900BB9B3D /* NetworkRequest.swift in Sources */,
 				1793B8482C6E730600BB9B3D /* MainViewController + TableView.swift in Sources */,
 				1750840F2C6E5C16004B2EBD /* AppDelegate.swift in Sources */,
+				1793B8582C70A1F400BB9B3D /* NetworkDataFetch.swift in Sources */,
 				1793B8542C70A01900BB9B3D /* NetworkError.swift in Sources */,
 				175084112C6E5C16004B2EBD /* SceneDelegate.swift in Sources */,
 				1793B8502C709D7600BB9B3D /* Users.swift in Sources */,

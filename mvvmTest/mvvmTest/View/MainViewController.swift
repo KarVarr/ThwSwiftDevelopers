@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupTableView()
+        mainViewModel.getUsers()
     }
     
     override func viewDidLayoutSubviews() {
